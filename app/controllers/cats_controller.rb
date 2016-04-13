@@ -1,6 +1,7 @@
 class CatsController < ApplicationController
 
 	def index
+		@cats = Cat.all
 	end
 
 	def new
@@ -10,6 +11,16 @@ class CatsController < ApplicationController
 	def create
 		@cat = Cat.create(cat_params)
 		redirect_to cats_path
+	end
+
+	def show
+		@cat = Cat.find(params[:id])
+	end
+	
+	def edit
+	end
+
+	def update
 	end
 
 	private
