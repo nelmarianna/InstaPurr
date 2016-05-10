@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Catgram</title>
+  <title>InstaPurr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%flash.each do |name, msg|%>
-<%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
-
-<%= yield %>
-
+	<header id="return">
+		<nav>
+			<%= link_to "InstaPurr", cats_path %>
+			<div class="right">
+			<%= link_to "post a cat", new_cat_path %>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<% flash.each do |name, msg|%>
+		<%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
+		<% end %>
+	</div>
+	<div class="container">
+	<a href="#return" class="up">^</a>
+		<div id="the-cats">
+			<%= yield %>
+		</div>
+		
+	</div>
 </body>
 </html>

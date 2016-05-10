@@ -17,6 +17,7 @@ class CatsController < ApplicationController
 		else
 			flash.now[:alert]="Oh No! Your cat ran away, try again"
 			render :new
+		end
 	end
 
 	def show
@@ -30,10 +31,11 @@ class CatsController < ApplicationController
 	def update
 		if @cat.update(cat_params)
 			flash[:success]="You've successfully updated your \"cat\"tion *slowclap*."
-		redirect_to cat_path(@cat)
-	else
-		flash.now[:alert]="No one can see that you updated that typo and now everyone thinks you can't spell.... try again"
-		render :edit
+			redirect_to cat_path(@cat)
+		else
+			flash.now[:alert]="No one can see that you updated that typo and now everyone thinks you can't spell.... try again"
+			render :edit
+		end
 	end
 
 	def destroy

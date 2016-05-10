@@ -1,0 +1,21 @@
+
+.container{
+	width:100%;
+}
+
+#the-cats{
+	width:50%;
+	margin:0px auto;
+	padding:20px 20px;
+	background-color: #E7E4E4;
+	box-shadow: 0px 5px 10px #b7aeae;
+}
+.post{
+	color:#FF734D;
+
+}
+.up{
+	position:fixed;
+	font-size: 100px;
+	color:black;
+}

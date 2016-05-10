@@ -1,5 +1,6 @@
 <%= simple_form_for @cat do |f| %>
   <%= f.input :image %>
-  <%= f.input :caption %>
+   
+  <%= f.input :caption, :label => "\"cat\"tion" %>
   <%= f.button :submit %>
 <% end %>
