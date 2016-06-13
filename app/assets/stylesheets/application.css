@@ -19,11 +19,9 @@ body{
 	background-color: #FFEBD4;
 }
 nav {
-	/*background:linear-gradient(,#FF9779,#3F3D3C);*/
 	padding:10px 0px;
-
 	background-color: #3F3D3C;
-box-shadow: 0px 3px 10px #b7aeae;
+	box-shadow: 0px 3px 10px #b7aeae;
 }
 
 nav a{
@@ -32,6 +30,9 @@ nav a{
 	font-family: "Avant Garde", "Arial";
 	font-size: 40px;
 	margin:10px 20px;
+}
+a:hover{
+	color:#FF734D;
 }
 
 nav .right{
